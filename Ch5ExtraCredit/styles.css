@@ -1,0 +1,44 @@
+body{
+    background-image: url(5027.png);
+}
+
+.blue {
+    color: #1b5fbf;
+}
+
+img {
+    height: 40%;
+    width: 85%;
+}
+
+main h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:aquamarine;
+}
+
+h3{
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#heading-four{
+    font-display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:blueviolet
+}
+
+.textThatIsLessSignificant{
+    text-align-last: center;
+    font-size: smaller;
+    color: chartreuse
+}
+
+h5{
+    font-family: 'Impact', Tahoma, Verdana, Geneva, sans-serif;
+    color: #ff098e
+}
+
+h6{
+    text-align:justify;
+    font-style: oblique;
+}
