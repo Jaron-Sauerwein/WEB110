@@ -1,0 +1,165 @@
+/*Jaron Sauerwein Midterm Project 6/28/2025*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/*here we set the header up to have the correct color, size, and alignment*/
+header h1{
+    font-size: 6rem;
+    color:#f5c342;
+    text-align: center
+}
+
+/*Here we set the font size and gap between the nav elements. I also set the list-style-type to none so as to remove any shapes between the nav elements.*/
+nav ul{
+    font-size:1.5em;
+    list-style-type: none;
+    gap: 3rem;
+}
+
+/*Here we set the inline display of the nav elements, so that they can both exist on the same line. I decided to keep the nav elements in the top left corner, as I felt that was a unique arrangement compared to the examples we've worked with so far.*/
+nav li{
+    display:inline;
+}
+
+/*Here we set the initial traits of the nav. I decided to go with white text to match the p text below, and we removed text decoration so as to not have the nav arranged as hyperlinks.*/
+nav a{
+    color: white;
+    text-decoration: none;
+    padding-left:9px;
+    padding-right:9px;
+}
+
+/*Now when hovering over the text, it will turn to a golden yellow color that matches the theme.*/
+nav a:hover{
+    color: #f5c342;
+    text-decoration: none;
+    max-width: 90%;
+}
+
+/*Here I added the asphalt texture background, with fits the highway theme of the page. I allowed the image to tile as default because highways are often made of large square patches, thus matching the theme.*/
+body{
+     background-image:url(asphalt-road-texture-dark-gray-color.jpg);
+     background-size: contain;    
+}
+
+/*Added a small margin and inserted a theme-matching border with an inlet edge and thick width to images.*/
+img{
+    margin-left:2%;
+    border-style:inset;
+    border-color:#f5c342;
+    border-width:thick;
+}
+
+/*Aligned figcaptions and gave them the same color as the p, ul, and ol text.*/
+figcaption{
+    align-content:center;
+    color: white;
+}
+
+/*Here we center aligned our text, set an automatic margin and some resonable padding and bottom margins.*/
+main{
+    text-align:center;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+/*This is where we set the color for the headings and aligned them to the center. I chose a font size that was only slightly larger than the p text as I wanted the headings to be only subtly larger.*/
+h2{
+    color:#f5c342;
+    text-align:center;
+    font-size:2.5em;
+}
+
+/*Here's where I made the decision to go with white text to match the highway theme of the page. I also set the font size as .5em smaller than the headings and decided on margins and padding.*/
+p{
+    color:white;
+    font-size: 2em;
+    padding:1em;
+    margin-top:.75em;
+    margin-bottom:.75em;
+    margin-left:8%;
+    margin-right:8%;
+}
+
+/*Changed the attributes of the link so that they matched the rest of the paragraph. I found that the link needed some trait that made it more obvious to the user, so I decided to go with Italics. */
+a:link{
+    color:white;
+    text-decoration:none;
+    font-style: italic;
+}
+
+/*Affirmed that I want the text to remain white even after it has been visited.*/
+a:visited{
+    color:white;
+}
+
+/*When focused on I set the text to be the matching golden yellow, sticking with the theme but adding visual interest.*/
+a:focus{
+    color:#f5c342;
+}
+
+/*Ditto for hover.*/
+a:hover{
+    color:#f5c342;
+}
+
+/*Also the same when the text is active.*/
+a:active{
+    color:#f5c342;
+}
+
+/*Here is where I set up the standards for our unorganized lists. I set the position to inside to keep the graphic additions near to the text. Inline-block and text centered give the elements a cohesive look. Also set the text and its font color to match p.*/
+ul{
+    list-style-position: inside;
+    margin-top:.5em;
+    margin-bottom:.5em;
+    margin-right:2em;
+    margin-left:0;
+    display:inline-block;
+    text-align:center;
+    color:white;
+    font-size:2em;
+}
+
+/*Commands for the organized list are identical to the unorganized list.*/
+ol{
+    list-style-position:inside;
+    margin-top:.5em;
+    margin-bottom:.5em;
+    margin-right:2em;
+    margin-left:0;
+    display:inline-block;
+    text-align:center;
+    color:white;
+    font-size:2em;
+}
+
+/*I also set margins for the individual list items, and also give them an indent that I felt made the lists look much more professional.*/
+li{ 
+    margin-top:.5em;
+    margin-bottom:.5em;
+    margin-right:2em;
+    margin-left:0;
+    text-indent:1em;
+    text-align:center;
+}
+
+/*Each paragraph with its heading and any images or lists were organized into sections for easy access.*/
+section{
+    margin-left:1%;
+    margin-right:1%;
+    margin-bottom:1%
+}
+
+/*Finally, I created a footer with centered text and the matching yellow pulled from an actual photo of a rural highway.*/
+footer{
+    color:#f5c342;
+    text-align:center;
+}
+
+/*I hope you enjoyed my CSS! Have a great weekend!*/
+
