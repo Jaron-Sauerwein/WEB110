@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--Jaron Sauerwein Final Project 7/22/2025-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Docent Application</title>
+        
+        <style type="text/css">
+         *{
+           font-family: Arial, sans-serif;
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            }
+            
+        .nav{
+            display:inline;  
+            }
+            
+        nav ul{
+            font-size:1.5em;
+            list-style-type: none;
+            gap: 3em;
+            }
+            
+         /*Here we set the inline display of the nav elements, so that they can both exist on the same line. I decided to keep the nav elements in the top left corner, as I felt that was a unique arrangement compared to the examples we've worked with so far.*/
+        nav li{
+          display:inline;
+          margin: 3em;
+          }
+         
+          /*Here we set the initial traits of the nav. I decided to go with white text to match the p text below, and we removed text decoration so as to not have the nav arranged as hyperlinks.*/
+        nav a{
+         color: white;
+         text-decoration: none;
+         padding-left:9px;
+         padding-right:9px;
+         }
+         
+         /*Now when hovering over the text, it will turn to a golden yellow color that matches the theme.*/
+        nav a:hover{
+          color: #f5c342;
+          text-decoration: none;
+          max-width: 90%;
+          }
+           
+        header h1{
+         font-size: 6rem;
+         color:#f5c342;
+         text-align: center
+         }
+        
+        /*Here is the wrapper, where I set the grid template so as to create a two-column page layout on this page.*/
+         #wrapper{
+          display:grid;
+          grid-template-columns: 50% 50%;
+          grid-template-rows: 6% auto auto auto auto auto auto auto auto 30%;
+          grid-template: 
+                       "question main"
+                       "question2 main2" 
+                       "question3 main3" 
+                       "question4 main4" 
+                       "question5 main5"
+                        
+}
+            
+         body{
+         gap:1em;
+         background-image:url(asphalt-road-texture-dark-gray-color.jpg);
+         background-size: contain;    
+         }
+            
+         h3{ 
+            color:#f5c342;
+            }
+            
+         form{
+            gap: 1em;
+            padding: 2em;
+            }
+            
+         .radio{
+            color:white;
+            text-decoration:none;
+            font-style: italic;  
+            }
+         /*I increased the size of my font on this page to "large" as one target market for KCAM volunteering is retirees who may stuggle with small text */   
+         p{
+            color:white;
+            text-decoration:none;
+            font-style: normal;
+            font-size:large;
+            margin-bottom: 2%;
+            }
+         
+         /*Changed the attributes of the link so that they matched the rest of the paragraph. I found that the link needed some trait that made it more obvious to the user, so I decided to go with Italics. */
+         a:link{
+           color:white;
+           text-decoration:none;
+           font-style: italic;
+               }
+             
+         /*Affirmed that I want the text to remain white even after it has been visited.*/
+         a:visited{
+           color:white;
+                 }
+                 
+        /*When focused on I set the text to be the matching golden yellow, sticking with the theme but adding visual interest.*/
+         a:focus{
+            color:#f5c342;
+            }
+
+        /*Ditto for hover.*/
+         a:hover{
+            color:#f5c342;
+            }
+
+        /*Also the same when the text is active.*/
+         a:active{
+           color:#f5c342;
+            }
+            
+         h3{
+           color:#f5c342;
+           margin-top: 9px;
+           }
+            
+         .headerexplanation{
+            text-align:center;
+            margin-top:2em;
+            }
+            
+         .image{
+            width:25%;
+            height:auto;
+            display:block;
+            margin:auto;
+            border-style:inset;
+            border-color:#f5c342;
+            border-width:thick;
+            align-content: center;
+            margin-top:2em;
+            }
+            
+            
+         figcaption{
+            text-align:center;
+            color:white;
+            }
+          
+         /*Modified the checkbox options to match the formatting of the other text.*/  
+         .checkboxoption{
+            display:inline;
+            color:white;
+            font-family:Arial, sans-serif;
+            font-size:large;
+            }
+            
+         label{
+            color:white;
+            padding:0.5em;
+            }
+         /*Here I have made a series of classes that will allow me to place my elements within the grid of my 2-column flexible page.*/    
+         .name{
+            grid-area: question;
+            }
+            
+         .email{
+            grid-area: main;
+            }
+            
+         .volunteertype{
+            grid-area: question3;
+            }
+            
+         .areaofexpertise{
+            grid-area: main2;
+            }
+            
+         .radioOption{
+            margin-top:1em;
+            margin-bottom:1em;
+            }
+            
+         .yourcars{
+            grid-area: question2;
+            }
+            
+         .schedule{
+            grid-area: main3;
+            }
+            
+         .startdate{
+            grid-area:question4;
+            }
+            
+         .submit{
+            grid-area: question5;
+            }
+            
+         .reset{
+            grid-area:main5;
+            }
+            
+         select{
+            width: 25%;
+            font-size:large;
+            }
+            
+         input[type="date"]{
+            width:25%;
+            font-size:large;
+            margin-bottom: 8%
+            }
+            
+         footer{
+            margin-top:4%;
+            color:#f5c342;
+            text-align:center;
+            }
+         
+        </style>
+    </head>
+    <body>
+    
+    <nav class="nav"> 
+         <!--Note here that the nav has been inserted as an unordered list per the assignment instructions.-->
+         <ul>
+           <li><a href="index.html">Home</a></li>  
+           <li><a href="volunteer.html">Volunteer</a></li>
+           <li><a href="docent.html">Docent Info</a></li>
+           <li><a href="form.html">Docent Application</a></li>
+         </ul>
+    </nav>    
+        
+    <header><h1>Docent Application</h1></header>
+    <section class="headerexplanation"> 
+        <p>Fill out the form below if you are interested in becoming a KCAM Docent. If you would prefer to print out a paper copy, please download it <a href="Volunteers%20Needed%20Flyer%20KCAM%202025.pdf" download>here.</a></p>
+    </section>  
+        
+    <figure>
+     <img class="image" src="beetleand57.jpeg" alt="You never know what will show up at the museum! Source: Kansas City Automotive Museum" width="500em" height=auto> 
+     <figcaption>You never know what will show up at the museum! Source: Kansas City Automotive Museum</figcaption>    
+    </figure>  <!--place the image here-->
+      
+     <form id="wrapper" method="post" action="https://webdevbasics.net/scripts/demo.php"> 
+         
+     <section class="name">
+      <h3>Full Name</h3>
+       <p>Enter your full name in the box below:</p>
+       <input type="text" size="95" name="Full Name" id="FullName">
+       </section>
+         
+     <section class="email">    
+     <h3>Email Address</h3>
+      <p>Please enter your email address below. We will contact your address once we have processed your application.</p>
+      <input type="email" size="95" name="Email Address" id="EmailAddress">
+     </section> 
+     
+     <section class="volunteertype">    
+     <h3>Volunteer Type</h3>
+      <p>Select the volunteer opportunities that most interest you. Please select all that apply.</p>
+       <br><input type="checkbox" name="RegularTours" id="RegularTours" value="yes"> <label class="checkboxoption">Giving regular tours at the auto museum</label>
+       <br><input type="checkbox" name="GroupTours" id="GroupTours" value="yes"> <label class="checkboxoption">Giving tours to large groups such as grade school classes and senior living residents</label>   
+       <br><input type="checkbox" name="SpecialEvents" id="SpecialEvents" value="yes"> <label class="checkboxoption">Helping set up and run our variety of events throughout the year, such as the Great Car Show and our booth at the Mecum auction</label>   
+       <br><input type="checkbox" name="AutoMaintenance" id="AutoMaintenance" value="yes"> <label class="checkboxoption">Restoring and maintaining the auto museum's permanent collection cars, including a 1928 Auburn, a 1956 Packard Executive, and a 1972 Lincoln Continental Mark IV among others </label>    
+     </section> 
+     
+     <section class="areaofexpertise">
+     <h3>Area of Expertise</h3>
+      <p>Select below the area of automotive history with which you are most confident. If you feel confident in all fields, select "All of the Above". If you're not sure, select "Not Sure".</p>
+        <input type="radio" class="radioOption" name="exp" id="expampw" value="AMPW"><label>PreWar American (1890-1941)</label><br>    
+        <input type="radio" class="radioOption" name="exp" id="expamga" value="AMGA"><label>American Golden Age (1946-1974)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expamma" value="AMMA"><label>American Malaise Era (1975-1995)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expammo" value="AMMO"><label>Modern American (1996-Present)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expeupw" value="EUPW"><label>Early European (1890-1939)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expeusc" value="EUSC"><label>The European Sports Car Era (1946-1969)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expeulc" value="EULC"><label>The European Luxury Car Era (1970-1991)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expeumo" value="EUMO"><label>Modern European (1992-Present)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expjpea" value="JPEA"><label>Early Japanese (1958-1974)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expjpga" value="JPGA"><label>Japanese Golden Age (1975-1998)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expjpmo" value="JPMO"><label>Modern Japanese (1999-Present)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expmipo" value="MIPO"><label>Military or Police Vehicles (all eras)</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expaota" value="AOTA"><label>All of the Above</label><br>
+        <input type="radio" class="radioOption" name="exp" id="expnosu" value="NOSU"><label>Not Sure</label><br>
+     </section>
+         
+     <section class="yourcars">
+     <h3>Your Cars</h3>
+      <p>Tell us about your fleet at home. What cars do you own? Also feel free to mention any classic cars that you help to drive or maintain.</p>
+      <textarea name="yourcars" id="yc" cols="95" rows="40">Type Here</textarea> 
+     </section>  
+        
+        
+     <section class="schedule">  
+     <h3>Prefered Scheduled Tour Day</h3>
+      <p>If you selected the "Giving regular tours" option above, use the selector below to choose a timeslot that you would like to volunteer. AM is from open, which is typically 10 AM, to 1 PM. PM is from 1 PM to close at 5 PM. If you did not choose the "Giving regular tours" option, select "Not Applicable"</p>
+      <select>
+       <option>Tuesday AM</option>
+       <option>Tuesday PM</option>
+       <option>Wednesday AM</option>
+       <option>Wednesday PM</option>
+       <option>Thursday AM</option>
+       <option>Thursday PM</option>
+       <option>Friday AM</option>
+       <option>Friday PM</option>
+       <option>Saturday AM</option>
+       <option>Saturday PM</option>
+       <option>Sunday AM</option>
+       <option>Sunday PM</option>
+       <option>Not Applicable</option>
+      </select>
+     </section>  
+         
+     <section class="startdate">
+     <h3>Start Date</h3>
+      <p>Choose your first avaliable date to volunteer in the calendar below.</p>
+      <input type="date" name="startDate" id="startDate">
+     </section>    
+     
+     <!--I made the submit and reset buttons quite large to avoid any possibility of them being accidentally selected.-->
+     <section class = "submit">
+     <input type="submit" style="width:350px; height:30px; font-size:20px">
+     </section>
+    
+     <section class="reset">
+     <input type="reset" style="width:350px; height:30px; font-size:20px">
+     </section>
+    
+     </form>
+     <footer>All unsourced images are the property of Jaron Sauerwein. <br><br> © 2025 Jaron Sauerwein</footer>
+    </body>
+</html>
